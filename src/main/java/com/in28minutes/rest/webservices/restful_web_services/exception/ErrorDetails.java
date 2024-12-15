@@ -1,13 +1,14 @@
 package com.in28minutes.rest.webservices.restful_web_services.exception;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class ErrorDetails {
     private LocalDate timestamp;
     private String message;
-    private String details;
+    private List<String> details;
 
-    public ErrorDetails(LocalDate timestamp, String message, String details) {
+    public ErrorDetails(LocalDate timestamp, String message, List<String> details) {
         this.message = message;
         this.timestamp = timestamp;
         this.details = details;
@@ -21,7 +22,7 @@ public class ErrorDetails {
         return message;
     }
 
-    public String getDetails() {
+    public List<String> getDetails() {
         return details;
     }
 }
